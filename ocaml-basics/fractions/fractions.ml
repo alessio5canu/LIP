@@ -21,7 +21,7 @@ let compare_posfrac (a,b)(x,y) =
   else failwith("frazione non positiva!")
 ;;
 
-
+(* comparazione frazioni *)
 let compare_frac (a,b)(x,y) = 
   
   if (is_posfrac(a,b) && is_posfrac(x,y)) = false then 
