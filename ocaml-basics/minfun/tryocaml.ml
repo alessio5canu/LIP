@@ -1,12 +1,13 @@
-type 'a option = Some of 'a | None
+(* val minfun : (int -> 'a) -> int -> int -> 'a option = <fun> *)
+type 'a option = Some of 'a | None 
                  
-let f x = x;;
-              
-let rec minfun f x y = 
+let f x = x*5;;
 
-  if x = y then None
+let rec minRic funz x y= 
+  
+  if (x = y) then f x
   else
-    match y with
-    |0 -> 
-    |_ -> minfun f (if 
-                    ;;
+    min (f x) (minRic f (x+1) y) 
+;; 
+
+let minfun f a b = if (a > b) then None else minRic(f a b);;
